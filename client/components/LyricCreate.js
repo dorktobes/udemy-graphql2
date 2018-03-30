@@ -40,9 +40,9 @@ class LyricCreate extends Component {
 const mutation = gql`
   mutation AddLyricToSong ($songId: ID!, $content: String!) {
     addLyricToSong(songId: $songId, content: $content) {
-      title
       id
       lyrics {
+        id
         content
       }
     }
